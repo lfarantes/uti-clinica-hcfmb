@@ -58,7 +58,7 @@ except Exception as e:
     st.stop()
 
 # --- Título Principal ---
-st.title("Dashboard de Gestão – UTI Clínica")
+st.title("Sistema de Gestão – UTI Clínica")
 st.markdown(f"### Análise de **{month_name} de {selected_year}**")
 
 # --- Criação das Abas ---
