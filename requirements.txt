@@ -1,5 +1,8 @@
 streamlit
-streamlit-authenticator
+requests
 pandas
+altair
+pycap
+streamlit-authenticator
 pyyaml
 numpy
