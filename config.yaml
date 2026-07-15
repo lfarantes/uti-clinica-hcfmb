@@ -1,0 +1,10 @@
+credentials:
+  usernames:
+    lucas:
+      email: lfarantes@gmail.com
+      name: Lucas Arantes
+      password: 'Luc@s@r@nteS31' # Use uma senha forte
+cookie:
+  expiry_days: 1
+  key: random_signature_key
+  name: dashboard_uti_key
