@@ -10,16 +10,15 @@ import admin_report
 # --- Configuração da Página ---
 st.set_page_config(page_title="Sistema de Gestão - UTI Clínica HCFMB", page_icon="🏥", layout="wide")
 
-# --- Autenticação ---
-# --- Autenticação ---
-with open('config.yaml') as file:
-    config = yaml.load(file, Loader=yaml.SafeLoader)
+# --- Autenticação via Secrets ---
+# Lemos a string salva no secrets e transformamos em dicionário
+auth_config = yaml.safe_load(st.secrets["auth"]["config"])
 
 authenticator = stauth.Authenticate(
-    config['credentials'],
-    config['cookie']['name'],
-    config['cookie']['key'],
-    config['cookie']['expiry_days']
+    auth_config['credentials'],
+    auth_config['cookie']['name'],
+    auth_config['cookie']['key'],
+    auth_config['cookie']['expiry_days']
 )
 
 # Apenas chama o login, sem tentar desempacotar o retorno
